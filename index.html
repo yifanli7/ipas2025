@@ -16,7 +16,7 @@
         // 检测设备类型并设置背景图
         function setBackgroundImage() {
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            const backgroundUrl = isMobile ? './2.jpg' : './1.jpg';
+            const backgroundUrl = isMobile ? './phone.jpg' : './pc.jpg';
             document.body.style.backgroundImage = `url('${backgroundUrl}')`;
         }
         window.onload = setBackgroundImage;
