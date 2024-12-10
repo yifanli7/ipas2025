@@ -8,10 +8,19 @@
         html, body {
             height: 100%;
             margin: 0;
-            background: url('./1.jpg') no-repeat center center fixed;
+            background: no-repeat center center fixed;
             background-size: cover;
         }
     </style>
+    <script>
+        // 检测设备类型并设置背景图
+        function setBackgroundImage() {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const backgroundUrl = isMobile ? './2.jpg' : './1.jpg';
+            document.body.style.backgroundImage = `url('${backgroundUrl}')`;
+        }
+        window.onload = setBackgroundImage;
+    </script>
 </head>
 <body>
 </body>
